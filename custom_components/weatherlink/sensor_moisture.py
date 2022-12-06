@@ -32,6 +32,7 @@ class MoistureStatus(
     sensor_name="Moisture Status",
     unit_of_measurement=None,
     device_class=None,
+    state_class=None,
 ):
     @property
     def icon(self):

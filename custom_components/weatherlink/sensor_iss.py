@@ -43,6 +43,7 @@ class IssStatus(
     sensor_name="ISS Status",
     unit_of_measurement=None,
     device_class=None,
+    state_class=None,
 ):
     @property
     def icon(self):
@@ -229,6 +230,7 @@ class WindDirection(
     sensor_name="Wind direction",
     unit_of_measurement=None,
     device_class=None,
+    state_class=None,
 ):
     _DIRECTIONS = (
         "N",

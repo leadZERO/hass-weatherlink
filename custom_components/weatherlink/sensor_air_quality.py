@@ -37,6 +37,7 @@ class AirQualityStatus(
     sensor_name="Status",
     unit_of_measurement=None,
     device_class=None,
+    state_class=None,
 ):
     @property
     def icon(self):

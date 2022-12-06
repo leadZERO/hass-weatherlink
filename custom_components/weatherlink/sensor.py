@@ -18,6 +18,7 @@ class Pressure(
     sensor_name="Pressure",
     unit_of_measurement=units.Pressure,
     device_class="pressure",
+    state_class="measurement",
     required_conditions=(LssBarCondition,),
 ):
     @property
