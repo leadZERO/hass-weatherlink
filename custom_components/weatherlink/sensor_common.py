@@ -46,7 +46,11 @@ class WeatherLinkSensor(WeatherLinkEntity):
         sensor_name = kwargs.pop("sensor_name")
         unit_of_measurement = kwargs.pop("unit_of_measurement")
         device_class = kwargs.pop("device_class")
+<<<<<<< HEAD
         state_class = keargs.pop("state_class")
+=======
+        state_class = kwargs.pop("state_class")
+>>>>>>> 92b2254 (Add state_classes for devices)
         required_conditions = kwargs.pop("required_conditions", None)
 
         super().__init_subclass__(**kwargs)
