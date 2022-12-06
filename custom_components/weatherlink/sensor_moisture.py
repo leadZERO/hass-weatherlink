@@ -61,6 +61,7 @@ class SoilMoistureABC(MoistureSensor, abc=True):
             sensor_name=f"Soil Moisture {sensor_id}",
             unit_of_measurement="cb",
             device_class=None,
+            state_class="measurement",
             **kwargs,
         )
 
@@ -102,6 +103,7 @@ class SoilTemperatureABC(MoistureSensor, abc=True):
             sensor_name=f"Soil Temperature {sensor_id}",
             unit_of_measurement=units.Temperature,
             device_class="temperature",
+            state_class="measurement",
             **kwargs,
         )
 
@@ -140,6 +142,7 @@ class LeafABC(MoistureSensor, abc=True):
             sensor_name=f"Leaf {sensor_id}",
             unit_of_measurement="%",
             device_class=None,
+            state_class="measurement",
             **kwargs,
         )
 

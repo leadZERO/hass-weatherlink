@@ -73,6 +73,7 @@ class Temperature(
     sensor_name="Temperature",
     unit_of_measurement=units.Temperature,
     device_class="temperature",
+    state_class="measurement"
 ):
     @property
     def state(self):
@@ -94,6 +95,7 @@ class Humidity(
     sensor_name="Humidity",
     unit_of_measurement="%",
     device_class="humidity",
+    state_class="measurement"
 ):
     @property
     def state(self):
@@ -105,6 +107,7 @@ class Pm1p0(
     sensor_name="PM 1.0",
     unit_of_measurement=units.Pm,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -120,6 +123,7 @@ class Pm2p5(
     sensor_name="PM 2.5",
     unit_of_measurement=units.Pm,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -146,6 +150,7 @@ class Pm10p0(
     sensor_name="PM 10.0",
     unit_of_measurement=units.Pm,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):

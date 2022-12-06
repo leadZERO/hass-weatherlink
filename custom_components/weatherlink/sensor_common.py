@@ -19,6 +19,7 @@ class WeatherLinkSensor(WeatherLinkEntity):
         sensor_name: str,
         unit_of_measurement: Union[str, Type[Measurement], None],
         device_class: Optional[str],
+        state_class: Optional[str],
         required_conditions: Iterable[Type[ConditionRecord]] = None,
         **kwargs,
     ) -> None:
@@ -45,6 +46,7 @@ class WeatherLinkSensor(WeatherLinkEntity):
         sensor_name = kwargs.pop("sensor_name")
         unit_of_measurement = kwargs.pop("unit_of_measurement")
         device_class = kwargs.pop("device_class")
+        state_class = keargs.pop("state_class")
         required_conditions = kwargs.pop("required_conditions", None)
 
         super().__init_subclass__(**kwargs)
@@ -52,6 +54,7 @@ class WeatherLinkSensor(WeatherLinkEntity):
         cls._sensor_name = sensor_name
         cls._unit_of_measurement = unit_of_measurement
         cls._device_class = device_class
+        cls._state_class = state_class
         try:
             requirements = cls._required_conditions
         except AttributeError:
@@ -97,6 +100,10 @@ class WeatherLinkSensor(WeatherLinkEntity):
     @property
     def device_class(self):
         return self._device_class
+
+    @property
+    def state_class(self):
+        return self._state_class
 
 
 def round_optional(

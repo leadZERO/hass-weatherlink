@@ -43,6 +43,7 @@ class InsideTemp(
     sensor_name="Inside Temperature",
     unit_of_measurement=units.Temperature,
     device_class="temperature",
+    state_class="measurement",
     required_conditions=(LssTempHumCondition,),
 ):
     @property
@@ -68,6 +69,7 @@ class InsideHum(
     sensor_name="Inside Humidity",
     unit_of_measurement="%",
     device_class="humidity",
+    state_class="measurement",
     required_conditions=(LssTempHumCondition,),
 ):
     @property

@@ -69,6 +69,7 @@ class Temperature(
     sensor_name="Temperature",
     unit_of_measurement=units.Temperature,
     device_class="temperature",
+    state_class="measurement"
 ):
     @property
     def state(self):
@@ -93,6 +94,7 @@ class ThswIndex(
     sensor_name="THSW index",
     unit_of_measurement=units.Temperature,
     device_class="temperature",
+    state_class="measurement"
 ):
     @property
     def state(self):
@@ -104,6 +106,7 @@ class Humidity(
     sensor_name="Humidity",
     unit_of_measurement="%",
     device_class="humidity",
+    state_class="measurement"
 ):
     @property
     def state(self):
@@ -115,6 +118,7 @@ class WindSpeed(
     sensor_name="Wind speed",
     unit_of_measurement=units.WindSpeed,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -140,6 +144,7 @@ class WindSpeedNow(
     sensor_name="Wind speed last",
     unit_of_measurement=units.WindSpeed,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -157,6 +162,7 @@ class WindMaxSpeed(
     sensor_name="Wind max speed",
     unit_of_measurement=units.WindSpeed,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -182,6 +188,7 @@ class WindBearing(
     sensor_name="Wind bearing",
     unit_of_measurement="°",
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -206,6 +213,7 @@ class WindBearingNow(
     sensor_name="Wind bearing last",
     unit_of_measurement="°",
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -271,6 +279,7 @@ class SolarRad(
     sensor_name="Solar rad",
     unit_of_measurement="W/m²",
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -286,6 +295,7 @@ class UvIndex(
     sensor_name="UV index",
     unit_of_measurement="UV Index",
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -301,6 +311,7 @@ class RainRate(
     sensor_name="Rain rate",
     unit_of_measurement=units.RainRate,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -325,6 +336,7 @@ class Rainfall(
     sensor_name="Rainfall",
     unit_of_measurement=units.Rainfall,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
@@ -352,6 +364,7 @@ class Rainstorm(
     sensor_name="Rainstorm",
     unit_of_measurement=units.Rainfall,
     device_class=None,
+    state_class="measurement"
 ):
     @property
     def icon(self):
